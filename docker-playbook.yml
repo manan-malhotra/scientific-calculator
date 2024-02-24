@@ -1,0 +1,8 @@
+- name: docker build and push
+  hosts: localhost
+  tasks:
+      - name: Build docker container
+        command: docker build -t manan80malhotra/scientific-calculator:latest .
+
+      - name: Push docker container
+        command: docker push manan80malhotra/scientific-calculator:latest
